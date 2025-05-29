@@ -10,7 +10,7 @@ const Footer = () => {
       className="py-12 text-center"
     >
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-gray-500 text-sm">
+        <p className="text-slate-400 text-sm">
           © 2025 SA Assist. Built with ♥️ and AI.
         </p>
       </div>

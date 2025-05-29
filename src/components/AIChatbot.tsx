@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Bot, User } from 'lucide-react';
@@ -102,14 +101,14 @@ const AIChatbot = () => {
       {/* Floating Chat Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full shadow-lg flex items-center justify-center text-white z-50"
+        className="fixed bottom-6 right-6 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center text-slate-800 z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         animate={{ 
           boxShadow: [
-            "0 0 20px rgba(16, 185, 129, 0.3)",
-            "0 0 40px rgba(16, 185, 129, 0.6)",
-            "0 0 20px rgba(16, 185, 129, 0.3)"
+            "0 0 20px rgba(255, 255, 255, 0.3)",
+            "0 0 40px rgba(255, 255, 255, 0.6)",
+            "0 0 20px rgba(255, 255, 255, 0.3)"
           ]
         }}
         transition={{ 
@@ -135,20 +134,20 @@ const AIChatbot = () => {
               animate={{ x: 0, y: 0, opacity: 1 }}
               exit={{ x: 400, y: 100, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="w-96 h-[600px] bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/30 flex flex-col"
+              className="w-96 h-[600px] bg-slate-900/90 backdrop-blur-lg rounded-2xl shadow-2xl border border-slate-700/30 flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-4 border-b border-white/20">
+              <div className="flex items-center justify-between p-4 border-b border-slate-700/20">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center">
-                    <Bot size={16} className="text-white" />
+                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                    <Bot size={16} className="text-slate-800" />
                   </div>
-                  <h3 className="font-semibold text-gray-800">SA Assist AI Assistant</h3>
+                  <h3 className="font-semibold text-white">SA Assist AI Assistant</h3>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-gray-500 hover:text-gray-700 transition-colors"
+                  className="text-slate-400 hover:text-white transition-colors"
                 >
                   <X size={20} />
                 </button>
@@ -164,21 +163,21 @@ const AIChatbot = () => {
                     className={`flex gap-3 ${message.isUser ? 'justify-end' : 'justify-start'}`}
                   >
                     {!message.isUser && (
-                      <div className="w-6 h-6 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Bot size={12} className="text-white" />
+                      <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                        <Bot size={12} className="text-slate-800" />
                       </div>
                     )}
                     <div
                       className={`max-w-xs px-3 py-2 rounded-2xl ${
                         message.isUser
-                          ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white'
-                          : 'bg-white/60 text-gray-800 border border-white/30'
+                          ? 'bg-white text-slate-800'
+                          : 'bg-slate-800/60 text-white border border-slate-700/30'
                       }`}
                     >
                       <p className="text-sm">{message.text}</p>
                     </div>
                     {message.isUser && (
-                      <div className="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-6 h-6 bg-slate-600 rounded-full flex items-center justify-center flex-shrink-0">
                         <User size={12} className="text-white" />
                       </div>
                     )}
@@ -191,14 +190,14 @@ const AIChatbot = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex gap-3 justify-start"
                   >
-                    <div className="w-6 h-6 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center">
-                      <Bot size={12} className="text-white" />
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                      <Bot size={12} className="text-slate-800" />
                     </div>
-                    <div className="bg-white/60 border border-white/30 rounded-2xl px-3 py-2">
+                    <div className="bg-slate-800/60 border border-slate-700/30 rounded-2xl px-3 py-2">
                       <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                        <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" />
+                        <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
+                        <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
                       </div>
                     </div>
                   </motion.div>
@@ -206,7 +205,7 @@ const AIChatbot = () => {
               </div>
 
               {/* Input */}
-              <div className="p-4 border-t border-white/20">
+              <div className="p-4 border-t border-slate-700/20">
                 <div className="flex gap-2">
                   <input
                     type="text"
@@ -214,13 +213,13 @@ const AIChatbot = () => {
                     onChange={(e) => setInputMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Type your message..."
-                    className="flex-1 px-3 py-2 bg-white/60 border border-white/30 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+                    className="flex-1 px-3 py-2 bg-slate-800/60 border border-slate-700/30 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-white/30 text-white placeholder-slate-400"
                     disabled={isLoading}
                   />
                   <button
                     onClick={sendMessage}
                     disabled={!inputMessage.trim() || isLoading}
-                    className="px-3 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-3 py-2 bg-white text-slate-800 rounded-xl hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send size={16} />
                   </button>

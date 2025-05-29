@@ -13,37 +13,37 @@ const divisions: Division[] = [
     title: "Pulse HR",
     emoji: "👨‍💼",
     url: "https://placeholder-pulse-hr.com",
-    gradient: "from-emerald-300 via-teal-300 to-cyan-300"
+    gradient: "from-slate-700 via-slate-600 to-slate-700"
   },
   {
     title: "Finance GPT",
     emoji: "💰",
     url: "https://placeholder-finance-gpt.com",
-    gradient: "from-teal-300 via-cyan-300 to-blue-300"
+    gradient: "from-slate-700 via-blue-800 to-slate-700"
   },
   {
     title: "Payroll GPT",
     emoji: "🧾",
     url: "https://placeholder-payroll-gpt.com",
-    gradient: "from-cyan-300 via-sky-300 to-blue-300"
+    gradient: "from-blue-800 via-slate-700 to-blue-800"
   },
   {
     title: "Clients GPT",
     emoji: "🧑‍💼",
     url: "https://placeholder-clients-gpt.com",
-    gradient: "from-emerald-300 via-green-300 to-teal-300"
+    gradient: "from-slate-600 via-slate-700 to-slate-600"
   },
   {
     title: "Security Policies GPT",
     emoji: "🔐",
     url: "https://placeholder-security-gpt.com",
-    gradient: "from-teal-300 via-emerald-300 to-green-300"
+    gradient: "from-slate-700 via-slate-800 to-slate-700"
   },
   {
     title: "Helpdesk GPT",
     emoji: "💬",
     url: "https://placeholder-helpdesk-gpt.com",
-    gradient: "from-sky-300 via-cyan-300 to-teal-300"
+    gradient: "from-blue-800 via-slate-800 to-blue-800"
   }
 ];
 
@@ -56,10 +56,10 @@ const HeroCards = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent mb-6">
+        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
           Welcome to SA Assist
         </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <p className="text-xl text-slate-300 max-w-2xl mx-auto">
           Your comprehensive AI-powered platform for streamlined business operations
         </p>
       </motion.div>
@@ -91,17 +91,17 @@ const HeroCards = () => {
               bg-gradient-to-br ${division.gradient}
               rounded-3xl p-8 h-64
               backdrop-blur-lg bg-opacity-60
-              border border-white/30
+              border border-slate-600/30
               shadow-xl hover:shadow-2xl
               transition-all duration-300
               transform-gpu perspective-1000
             `}
             style={{
               backdropFilter: 'blur(20px)',
-              background: `linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1))`,
+              background: `linear-gradient(135deg, rgba(71, 85, 105, 0.8), rgba(51, 65, 85, 0.6))`,
             }}
           >
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
               <motion.div 
@@ -112,7 +112,7 @@ const HeroCards = () => {
                 {division.emoji}
               </motion.div>
               
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2">
                 {division.title}
               </h3>
               
@@ -124,7 +124,7 @@ const HeroCards = () => {
               />
             </div>
 
-            <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-transparent via-white/10 to-transparent" />
+            <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-transparent via-white/5 to-transparent" />
           </motion.a>
         ))}
       </div>
