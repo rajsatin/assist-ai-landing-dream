@@ -5,7 +5,7 @@ interface Division {
   title: string;
   emoji: string;
   url: string;
-  gradient: string;
+  description: string;
 }
 
 const divisions: Division[] = [
@@ -13,37 +13,37 @@ const divisions: Division[] = [
     title: "Pulse HR",
     emoji: "👨‍💼",
     url: "https://placeholder-pulse-hr.com",
-    gradient: "from-slate-700 via-slate-600 to-slate-700"
+    description: "Streamline HR operations with AI-powered employee management"
   },
   {
     title: "Finance GPT",
     emoji: "💰",
     url: "https://placeholder-finance-gpt.com",
-    gradient: "from-slate-700 via-blue-800 to-slate-700"
+    description: "Smart financial analysis and automated reporting solutions"
   },
   {
     title: "Payroll GPT",
     emoji: "🧾",
     url: "https://placeholder-payroll-gpt.com",
-    gradient: "from-blue-800 via-slate-700 to-blue-800"
+    description: "Automated payroll processing with intelligent calculations"
   },
   {
     title: "Clients GPT",
     emoji: "🧑‍💼",
     url: "https://placeholder-clients-gpt.com",
-    gradient: "from-slate-600 via-slate-700 to-slate-600"
+    description: "Enhanced client relationship management and communication"
   },
   {
     title: "Security Policies GPT",
     emoji: "🔐",
     url: "https://placeholder-security-gpt.com",
-    gradient: "from-slate-700 via-slate-800 to-slate-700"
+    description: "Comprehensive security policy management and compliance"
   },
   {
     title: "Helpdesk GPT",
     emoji: "💬",
     url: "https://placeholder-helpdesk-gpt.com",
-    gradient: "from-blue-800 via-slate-800 to-blue-800"
+    description: "Intelligent customer support and ticket resolution system"
   }
 ];
 
@@ -53,14 +53,15 @@ const HeroCards = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1, ease: "easeOut" }}
         className="text-center mb-16"
       >
-        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-          Welcome to SA Assist
+        <h1 className="text-5xl md:text-6xl font-bold text-blue-900 mb-6">
+          Welcome to <span className="text-blue-600">SA Assist</span>
         </h1>
-        <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-          Your comprehensive AI-powered platform for streamlined business operations
+        <p className="text-xl text-blue-700 max-w-3xl mx-auto leading-relaxed">
+          Your comprehensive AI-powered platform for streamlined business operations. 
+          Transform your workflow with intelligent automation and data-driven insights.
         </p>
       </motion.div>
 
@@ -71,60 +72,57 @@ const HeroCards = () => {
             href={division.url}
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 100, rotate: index % 2 === 0 ? -5 : 5 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            initial={{ opacity: 0, y: 100, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ 
-              duration: 0.6, 
-              delay: index * 0.1,
-              type: "spring",
-              stiffness: 100 
+              duration: 0.8, 
+              delay: index * 0.15,
+              ease: "easeOut"
             }}
             whileHover={{ 
               scale: 1.05, 
-              rotateY: 5,
-              z: 50,
-              transition: { duration: 0.3 }
+              y: -10,
+              transition: { duration: 0.3, ease: "easeOut" }
             }}
-            whileTap={{ scale: 0.95 }}
-            className={`
+            whileTap={{ scale: 0.98 }}
+            className="
               relative group cursor-pointer block
-              bg-gradient-to-br ${division.gradient}
-              rounded-3xl p-8 h-64
-              backdrop-blur-lg bg-opacity-60
-              border border-slate-600/30
+              bg-white/80 backdrop-blur-lg
+              rounded-3xl p-8 h-72
+              border border-blue-200/50
               shadow-xl hover:shadow-2xl
-              transition-all duration-300
-              transform-gpu perspective-1000
-            `}
-            style={{
-              backdropFilter: 'blur(20px)',
-              background: `linear-gradient(135deg, rgba(71, 85, 105, 0.8), rgba(51, 65, 85, 0.6))`,
-            }}
+              transition-all duration-500
+              hover:border-blue-300/70
+            "
           >
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-50/50 to-blue-100/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
               <motion.div 
                 className="text-6xl mb-4"
-                whileHover={{ scale: 1.2, rotate: 10 }}
+                whileHover={{ scale: 1.2, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 {division.emoji}
               </motion.div>
               
-              <h3 className="text-xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-blue-900 mb-3">
                 {division.title}
               </h3>
               
+              <p className="text-sm text-blue-600 mb-4 leading-relaxed">
+                {division.description}
+              </p>
+              
               <motion.div 
-                className="w-12 h-0.5 bg-white/50 rounded-full"
+                className="w-12 h-0.5 bg-blue-400 rounded-full"
                 initial={{ width: 0 }}
                 whileInView={{ width: 48 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
               />
             </div>
 
-            <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-transparent via-white/5 to-transparent" />
+            <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-transparent via-blue-50/20 to-transparent" />
           </motion.a>
         ))}
       </div>
