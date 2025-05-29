@@ -6,24 +6,22 @@ const Navigation = () => {
     <motion.nav 
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-blue-200/50 shadow-lg"
+      transition={{ duration: 0.6 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-white/20"
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <motion.div 
-            className="text-2xl font-bold text-blue-900"
+            className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
           >
             SA Assist
           </motion.div>
           <motion.a 
             href="#about"
-            className="text-blue-700 hover:text-blue-900 transition-colors duration-300 font-medium"
-            whileHover={{ scale: 1.05, y: -2 }}
+            className="text-gray-600 hover:text-emerald-600 transition-colors duration-300 font-medium"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400 }}
           >
             About
           </motion.a>
