@@ -13,37 +13,37 @@ const divisions: Division[] = [
     title: "Pulse HR",
     emoji: "👨‍💼",
     url: "https://placeholder-pulse-hr.com",
-    gradient: "from-pink-300 via-purple-300 to-indigo-300"
+    gradient: "from-emerald-300 via-teal-300 to-cyan-300"
   },
   {
     title: "Finance GPT",
     emoji: "💰",
     url: "https://placeholder-finance-gpt.com",
-    gradient: "from-blue-300 via-cyan-300 to-teal-300"
+    gradient: "from-teal-300 via-cyan-300 to-blue-300"
   },
   {
     title: "Payroll GPT",
     emoji: "🧾",
     url: "https://placeholder-payroll-gpt.com",
-    gradient: "from-purple-300 via-pink-300 to-rose-300"
+    gradient: "from-cyan-300 via-sky-300 to-blue-300"
   },
   {
     title: "Clients GPT",
     emoji: "🧑‍💼",
     url: "https://placeholder-clients-gpt.com",
-    gradient: "from-emerald-300 via-teal-300 to-cyan-300"
+    gradient: "from-emerald-300 via-green-300 to-teal-300"
   },
   {
     title: "Security Policies GPT",
     emoji: "🔐",
     url: "https://placeholder-security-gpt.com",
-    gradient: "from-orange-300 via-pink-300 to-purple-300"
+    gradient: "from-teal-300 via-emerald-300 to-green-300"
   },
   {
     title: "Helpdesk GPT",
     emoji: "💬",
     url: "https://placeholder-helpdesk-gpt.com",
-    gradient: "from-indigo-300 via-purple-300 to-pink-300"
+    gradient: "from-sky-300 via-cyan-300 to-teal-300"
   }
 ];
 
@@ -56,7 +56,7 @@ const HeroCards = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-6">
+        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent mb-6">
           Welcome to SA Assist
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">

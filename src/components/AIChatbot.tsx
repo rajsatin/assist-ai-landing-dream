@@ -102,14 +102,14 @@ const AIChatbot = () => {
       {/* Floating Chat Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg flex items-center justify-center text-white z-50"
+        className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full shadow-lg flex items-center justify-center text-white z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         animate={{ 
           boxShadow: [
-            "0 0 20px rgba(147, 51, 234, 0.3)",
-            "0 0 40px rgba(147, 51, 234, 0.6)",
-            "0 0 20px rgba(147, 51, 234, 0.3)"
+            "0 0 20px rgba(16, 185, 129, 0.3)",
+            "0 0 40px rgba(16, 185, 129, 0.6)",
+            "0 0 20px rgba(16, 185, 129, 0.3)"
           ]
         }}
         transition={{ 
@@ -141,7 +141,7 @@ const AIChatbot = () => {
               {/* Header */}
               <div className="flex items-center justify-between p-4 border-b border-white/20">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center">
                     <Bot size={16} className="text-white" />
                   </div>
                   <h3 className="font-semibold text-gray-800">SA Assist AI Assistant</h3>
@@ -164,14 +164,14 @@ const AIChatbot = () => {
                     className={`flex gap-3 ${message.isUser ? 'justify-end' : 'justify-start'}`}
                   >
                     {!message.isUser && (
-                      <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-6 h-6 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
                         <Bot size={12} className="text-white" />
                       </div>
                     )}
                     <div
                       className={`max-w-xs px-3 py-2 rounded-2xl ${
                         message.isUser
-                          ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
+                          ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white'
                           : 'bg-white/60 text-gray-800 border border-white/30'
                       }`}
                     >
@@ -191,7 +191,7 @@ const AIChatbot = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex gap-3 justify-start"
                   >
-                    <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center">
                       <Bot size={12} className="text-white" />
                     </div>
                     <div className="bg-white/60 border border-white/30 rounded-2xl px-3 py-2">
@@ -214,13 +214,13 @@ const AIChatbot = () => {
                     onChange={(e) => setInputMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Type your message..."
-                    className="flex-1 px-3 py-2 bg-white/60 border border-white/30 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-500/30"
+                    className="flex-1 px-3 py-2 bg-white/60 border border-white/30 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
                     disabled={isLoading}
                   />
                   <button
                     onClick={sendMessage}
                     disabled={!inputMessage.trim() || isLoading}
-                    className="px-3 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-3 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send size={16} />
                   </button>

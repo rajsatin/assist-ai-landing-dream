@@ -12,14 +12,14 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <motion.div 
-            className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+            className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
             SA Assist
           </motion.div>
           <motion.a 
             href="#about"
-            className="text-gray-600 hover:text-purple-600 transition-colors duration-300 font-medium"
+            className="text-gray-600 hover:text-emerald-600 transition-colors duration-300 font-medium"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
