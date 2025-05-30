@@ -10,42 +10,43 @@ interface Division {
 
 const divisions: Division[] = [
   {
-    title: "Pulse HR",
+    title: "Smart Finance",
+    emoji: "💵",
+    url: "https://chatgpt.com/g/g-68242d8344fc819197f30ef4de50da62-financegpt",
+    gradient: "from-teal-300 via-cyan-300 to-blue-300"
+  },
+  {
+    title: "People Hub",
     emoji: "👨‍💼",
     url: "https://placeholder-pulse-hr.com",
     gradient: "from-emerald-300 via-teal-300 to-cyan-300"
   },
   {
-    title: "Finance GPT",
-    emoji: "💰",
-    url: "https://placeholder-finance-gpt.com",
-    gradient: "from-teal-300 via-cyan-300 to-blue-300"
-  },
-  {
-    title: "Payroll GPT",
-    emoji: "🧾",
+    title: "Payroll Central",
+    emoji: "📋",
     url: "https://placeholder-payroll-gpt.com",
     gradient: "from-cyan-300 via-sky-300 to-blue-300"
   },
   {
-    title: "Clients GPT",
-    emoji: "🧑‍💼",
+    title: "Recruitment",
+    emoji: "🏗️",
     url: "https://placeholder-clients-gpt.com",
     gradient: "from-emerald-300 via-green-300 to-teal-300"
   },
   {
-    title: "Security Policies GPT",
-    emoji: "🔐",
+    title: "Marketing",
+    emoji: "🖥️",
     url: "https://placeholder-security-gpt.com",
     gradient: "from-teal-300 via-emerald-300 to-green-300"
   },
   {
-    title: "Helpdesk GPT",
-    emoji: "💬",
+    title: "Resource Management",
+    emoji: "🧰",
     url: "https://placeholder-helpdesk-gpt.com",
     gradient: "from-sky-300 via-cyan-300 to-teal-300"
   }
 ];
+
 
 const HeroCards = () => {
   return (

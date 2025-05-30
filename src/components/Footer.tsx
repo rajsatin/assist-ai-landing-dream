@@ -11,7 +11,7 @@ const Footer = () => {
     >
       <div className="max-w-7xl mx-auto px-6">
         <p className="text-gray-500 text-sm">
-          © 2025 SA Assist. Built with ♥️ and AI.
+          © 2025 SA Assist.
         </p>
       </div>
     </motion.footer>

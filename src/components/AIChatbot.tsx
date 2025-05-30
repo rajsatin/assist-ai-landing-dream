@@ -15,7 +15,7 @@ const AIChatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hi! I'm your assistant. Ask me anything about Pulse HR, Finance GPT, Payroll, Clients, or Security.",
+      text: "Hello! I’m your smart assistant — how can I assist you ?",
       isUser: false,
       timestamp: new Date()
     }
@@ -51,7 +51,7 @@ const AIChatbot = () => {
           messages: [
             {
               role: 'system',
-              content: 'You are SA Assist AI, a helpful assistant for a business platform that includes Pulse HR, Finance GPT, Payroll GPT, Clients GPT, Security Policies GPT, and Helpdesk GPT. Provide helpful, professional responses about these business tools and general business questions.'
+              content: 'You are SA Assist AI, a helpful assistant for a business platform supporting key enterprise functions like HR, Finance, and Operations'
             },
             {
               role: 'user',
@@ -144,7 +144,7 @@ const AIChatbot = () => {
                   <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center">
                     <Bot size={16} className="text-white" />
                   </div>
-                  <h3 className="font-semibold text-gray-800">SA Assist AI Assistant</h3>
+                  <h3 className="font-semibold text-gray-800">SA Assist</h3>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}

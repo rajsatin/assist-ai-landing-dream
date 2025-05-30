@@ -80,5 +80,18 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "description": "A Personal SA AI HR Assist Application",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajsatin/assist-ai-landing-dream.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajsatin/assist-ai-landing-dream/issues"
+  },
+  "homepage": "https://github.com/rajsatin/assist-ai-landing-dream#readme"
 }
