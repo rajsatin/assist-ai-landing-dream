@@ -18,7 +18,7 @@ const divisions: Division[] = [
   {
     title: "People Hub",
     emoji: "👨‍💼",
-    url: "https://placeholder-pulse-hr.com",
+    url: "https://chatgpt.com/g/g-6836b10ffb4081919030ab7e931de684-pulse-hr",
     gradient: "from-emerald-300 via-teal-300 to-cyan-300"
   },
   {
